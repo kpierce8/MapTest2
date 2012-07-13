@@ -67,7 +67,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DataSources\Geospatial\WRIA15\wria15_09changes_W84.dbf" />
+    <Content Include="DataSources\Geospatial\WRIA15\wria15_09changes_W84.shp" />
+    <Content Include="DataSources\Geospatial\WRIA15\wria15_outline_W84.dbf" />
+    <Content Include="DataSources\Geospatial\WRIA15\wria15_outline_W84.shp" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="DataSources\Geospatial\EightSOS2012_WGS84s10.dbf" />
     <Content Include="DataSources\Geospatial\EightSOS2012_WGS84s10.shp" />

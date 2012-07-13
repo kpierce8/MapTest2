@@ -11,6 +11,8 @@
 
    
     <Grid x:Name="LayoutRoot">
+        
+        <Grid x:Name="waView" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="850"/>
             <ColumnDefinition Width="150"/>              
@@ -82,7 +84,100 @@
                 <TextBlock Text="Area (sq mi): "/>
                 <TextBlock x:Name="sqMilesBlock"/>
             </StackPanel>
-        </StackPanel>
+
+                <Button x:Name="goWria" Content="WRIA 15" Click="goWria_Click" Margin="10"/>
+            </StackPanel>
+        </Grid>
+        
+        <Grid x:Name="wria15" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="850"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+
+
+            <telerik:RadMap Name="radMap2"
+                        Grid.Column="0"    
+                        Width="850"
+                        Height="600"
+                        ZoomLevel="9"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Center="47.5,-123"
+                        MouseClickMode="None"
+                        CommandBarVisibility="Collapsed" 
+                        
+                        MouseDoubleClickMode="None">
+
+                <telerik:RadMap.Provider>
+                    <telerik:WmsTiledProvider  
+                        BaseUri="http://raster.nationalmap.gov/arcgis/services/Orthoimagery/USGS_EDC_Ortho_NAIP/ImageServer/WMSServer?"/>
+                </telerik:RadMap.Provider>
+
+                
+                    
+               
+                
+                
+                
+                <telerik:InformationLayer x:Name="InformationLayer2">
+                    <telerik:InformationLayer.Reader>
+                        <telerik:MapShapeReader x:Name="myWria15Reader"
+                                            ToolTipFormat="WRIA_NM" />
+                    </telerik:InformationLayer.Reader>
+
+                    <telerik:InformationLayer.ShapeFill>
+                        <telerik:MapShapeFill Fill="Transparent"
+                                          Stroke="Black"
+                                          StrokeThickness="2" />
+                    </telerik:InformationLayer.ShapeFill>
+
+                </telerik:InformationLayer>
+
+                <telerik:InformationLayer x:Name="changesLayer">
+                    <telerik:InformationLayer.Reader>
+                        <telerik:MapShapeReader x:Name="changesReader"
+                                            ToolTipFormat="PolyID" />
+
+                    </telerik:InformationLayer.Reader>
+
+                    <telerik:InformationLayer.ShapeFill>
+                        <telerik:MapShapeFill Fill="Bisque"
+                                          Stroke="Black"
+                                          StrokeThickness="1" />
+                    </telerik:InformationLayer.ShapeFill>
+                    <telerik:InformationLayer.HighlightFill>
+                        <telerik:MapShapeFill Fill="Red"
+                                          Stroke="#5A636B"
+                                          StrokeThickness="1" />
+                    </telerik:InformationLayer.HighlightFill>
+
+                </telerik:InformationLayer>
+            </telerik:RadMap>
+
+            <StackPanel Grid.Column="1"
+                    Width="150"
+                    Height="600"
+                    Background="Beige"
+                    VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal"
+                        Margin="5,50,0,10">
+                    <TextBlock Text="Wria Name: "/>
+                    <TextBlock x:Name="titleBlock"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                        Margin="5,10,0,10">
+                    <TextBlock Text="Area (sq acres): "/>
+                    <TextBlock x:Name="acreage"/>
+                </StackPanel>
+
+             
+                 
+            <Button x:Name="goWA" Content="WA map"  Click="goWA_Click" Margin="10"/>
+            </StackPanel>
+               
+        </Grid>
+        
         
         
         
