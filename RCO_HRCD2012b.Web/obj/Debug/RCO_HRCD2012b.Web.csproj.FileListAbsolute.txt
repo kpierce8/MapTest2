@@ -1,0 +1,5 @@
+C:\data\ProjectsLocal\SOS2012\RCO_HRCD2012b\RCO_HRCD2012b.Web\bin\RCO_HRCD2012b.Web.dll
+C:\data\ProjectsLocal\SOS2012\RCO_HRCD2012b\RCO_HRCD2012b.Web\bin\RCO_HRCD2012b.Web.pdb
+C:\data\ProjectsLocal\SOS2012\RCO_HRCD2012b\RCO_HRCD2012b.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\data\ProjectsLocal\SOS2012\RCO_HRCD2012b\RCO_HRCD2012b.Web\obj\Debug\RCO_HRCD2012b.Web.dll
+C:\data\ProjectsLocal\SOS2012\RCO_HRCD2012b\RCO_HRCD2012b.Web\obj\Debug\RCO_HRCD2012b.Web.pdb
